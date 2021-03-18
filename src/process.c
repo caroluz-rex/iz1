@@ -5,32 +5,32 @@
 
 triangle* create_triangle () {
     triangle *raw_triangle = malloc(sizeof(triangle));
-    if(scanf("%f",&raw_triangle->a_side) !=1) {
-        free (raw_triangle);
+    if (scanf("%f",&raw_triangle->a_side) !=1) {
+        free(raw_triangle);
         return NULL;
     }
     if (raw_triangle->a_side <= 0) {
-        free (raw_triangle);
+        free(raw_triangle);
         return NULL;
     }
-    if(scanf("%f",&raw_triangle->b_side) !=1) {
-        free (raw_triangle);
+    if (scanf("%f",&raw_triangle->b_side) !=1) {
+        free(raw_triangle);
         return NULL;
     }
     if (raw_triangle->b_side <= 0) {
-        free (raw_triangle);
+        free(raw_triangle);
         return NULL;
     }
-    if(scanf("%f",&raw_triangle->c_side) !=1) {
-        free (raw_triangle);
+    if (scanf("%f",&raw_triangle->c_side) !=1) {
+        free(raw_triangle);
         return NULL;
     }
     if (raw_triangle->c_side <= 0) {
-        free (raw_triangle);
+        free(raw_triangle);
         return NULL;
     }
     if (!((raw_triangle->a_side+raw_triangle->b_side > raw_triangle->c_side)&(raw_triangle->a_side+raw_triangle->c_side > raw_triangle->b_side)&(raw_triangle->b_side+raw_triangle->c_side > raw_triangle->a_side)))  {
-        free (raw_triangle);
+        free(raw_triangle);
         return NULL;
     }
     return raw_triangle;
