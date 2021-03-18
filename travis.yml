@@ -12,8 +12,8 @@ install:
   - sudo pip install cpplint
 
 script:
-  - cppcheck --enable=all --language=c include/*/* src --suppress=missingInclude
-  - cpplint --extensions=c include/*/* src/*
+  - cppcheck --enable=all --language=c include/* src --suppress=missingInclude
+  - cpplint --extensions=c include/* src/*
   - mkdir build && cd build
   - cmake ..
   - make clean && make
