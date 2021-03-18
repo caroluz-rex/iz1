@@ -17,6 +17,6 @@ target_include_directories(Figures PUBLIC include)
 add_executable(iz1 ./src/main.c)
 target_link_libraries(iz1 Figures)
 
-add_subdirectory(thirdparty/gtest)
+add_subdirectory(thirdparty/googletest)
 add_executable(test tests/tests.cpp)
 target_link_libraries(test Figures gtest ${CMAKE_THREAD_LIBS_INIT})
