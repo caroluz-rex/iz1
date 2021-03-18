@@ -1,11 +1,11 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 #include "../include/process.h"
-#include "stdio.h"
 
-triangle* create_triangle () {
+triangle* create_triangle() {
     triangle *raw_triangle = malloc(sizeof(triangle));
-    if (scanf("%f",&raw_triangle->a_side) !=1) {
+    if (scanf("%f", &raw_triangle->a_side) !=1) {
         free(raw_triangle);
         return NULL;
     }
@@ -13,7 +13,7 @@ triangle* create_triangle () {
         free(raw_triangle);
         return NULL;
     }
-    if (scanf("%f",&raw_triangle->b_side) !=1) {
+    if (scanf("%f", &raw_triangle->b_side) !=1) {
         free(raw_triangle);
         return NULL;
     }
@@ -21,7 +21,7 @@ triangle* create_triangle () {
         free(raw_triangle);
         return NULL;
     }
-    if (scanf("%f",&raw_triangle->c_side) !=1) {
+    if (scanf("%f", &raw_triangle->c_side) !=1) {
         free(raw_triangle);
         return NULL;
     }
@@ -29,7 +29,9 @@ triangle* create_triangle () {
         free(raw_triangle);
         return NULL;
     }
-    if (!((raw_triangle->a_side+raw_triangle->b_side > raw_triangle->c_side)&(raw_triangle->a_side+raw_triangle->c_side > raw_triangle->b_side)&(raw_triangle->b_side+raw_triangle->c_side > raw_triangle->a_side)))  {
+    if (!((raw_triangle->a_side+raw_triangle->b_side > raw_triangle->c_side)
+    &(raw_triangle->a_side+raw_triangle->c_side > raw_triangle->b_side)
+    &(raw_triangle->b_side+raw_triangle->c_side > raw_triangle->a_side))) {
         free(raw_triangle);
         return NULL;
     }
@@ -42,7 +44,7 @@ circle* calculate_circle (triangle *raw_triangle) {
     float radius_around = 0.0;
     radius_around = (raw_triangle->a_side*raw_triangle->b_side*raw_triangle->c_side)/(4*sqrtf((half_p-raw_triangle->a_side)*(half_p-raw_triangle->b_side)*(half_p-raw_triangle->c_side)));
     circle *circle_around = malloc(sizeof(circle));
-    circle_around->radius=radius_around;
+    circle_around->radius = radius_around;
     return circle_around;
 }
 
