@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <math.h>
-#include "process.h"
+#include "../include/process.h"
 #include "stdio.h"
 
 triangle* create_triangle () {

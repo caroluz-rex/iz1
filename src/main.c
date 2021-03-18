@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "process.h"
-#include "freemem.h"
+#include "../include/process.h"
+#include "../include/freemem.h"
 
 int main() {
     triangle *new_triangle = create_triangle();
